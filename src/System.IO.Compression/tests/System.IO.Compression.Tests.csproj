@@ -64,6 +64,12 @@
     <SupplementalTestData Include="$(PackagesDir)microsoft.xunit.runner.uwp\1.0.2-prerelease-00220\**\*.*">
       <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
     </SupplementalTestData>
+    <SupplementalTestData Include="$(OutDir)System.IO.Compression\net46\*.*">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </SupplementalTestData>
+    <SupplementalTestData Include="$(OutDir)System.Runtime\*.*">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </SupplementalTestData>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
