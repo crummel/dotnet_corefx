@@ -18,7 +18,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <XunitPerfAnalysisPackageVersion>1.0.0-alpha-build0039</XunitPerfAnalysisPackageVersion>
+    <XunitPerfAnalysisPackageVersion>1.0.0-alpha-build0037</XunitPerfAnalysisPackageVersion>
+	<AppXRunnerVersion>1.0.3-prerelease-00608-99</AppXRunnerVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -147,6 +148,7 @@
     <DnuSourceList Condition="'$(BuildTestsAgainstPackages)' == 'true'" Include="$(PackagesDrops)" />
     <!-- Need to escape double forward slash (%2F) or MSBuild will normalize to one slash on Unix. -->
     <!-- Including buildtools to pull in TestSuite packages and repackaged xunit dependencies-->
+    <DnuSourceList Include="D:\git\dotnet_buildtools\bin\packages" />
     <DnuSourceList Include="https:%2F%2Fdotnet.myget.org/F/dotnet-buildtools/api/v3/index.json" />
     <DnuSourceList Include="https:%2F%2Fdotnet.myget.org/F/dotnet-core/api/v3/index.json" />
     <DnuSourceList Include="https:%2F%2Fwww.nuget.org/api/v2/" />
