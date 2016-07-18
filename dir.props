@@ -19,7 +19,7 @@
 
   <PropertyGroup>
     <XunitPerfAnalysisPackageVersion>1.0.0-alpha-build0037</XunitPerfAnalysisPackageVersion>
-	<AppXRunnerVersion>1.0.3-prerelease-00611-99</AppXRunnerVersion>
+	<AppXRunnerVersion>1.0.3-prerelease-00618-99</AppXRunnerVersion>
   </PropertyGroup>
 
   <PropertyGroup>
