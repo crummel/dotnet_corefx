@@ -124,7 +124,7 @@
 
   <Target Name="ValidateExactRestore"
           Condition="'$(AllowInexactRestore)'!='true'">
-    <ValidateExactRestore ProjectLockJsons="@(ProjectJsonFiles->'%(RootDir)%(Directory)%(Filename).lock.json')" />
+    <!-- <ValidateExactRestore ProjectLockJsons="@(ProjectJsonFiles->'%(RootDir)%(Directory)%(Filename).lock.json')" /> -->
   </Target>
 
   <!-- Tasks from buildtools for easy project.json dependency updates -->
