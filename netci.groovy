@@ -332,6 +332,7 @@ def osShortName = ['Windows 10': 'win10',
             }
             // Add archival for the built data.
             Utilities.addArchival(newJob, archiveContents)
+			Utilities.addAzureArchival(newJob, 'dciabstest', archiveContents)
             // Set up triggers
             if (isPR) {
                 // Set PR trigger, we run Windows_NT, Ubuntu 14.04, CentOS 7.1 and OSX on every PR.
