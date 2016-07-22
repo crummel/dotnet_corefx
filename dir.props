@@ -19,7 +19,7 @@
 
   <PropertyGroup>
     <XunitPerfAnalysisPackageVersion>1.0.0-alpha-build0037</XunitPerfAnalysisPackageVersion>
-	<AppXRunnerVersion>1.0.3-prerelease-00618-99</AppXRunnerVersion>
+    <AppXRunnerVersion>1.0.3-prerelease-00619-99</AppXRunnerVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -134,11 +134,7 @@
       <ExpectedVersion>$(AppXRunnerVersion)</ExpectedVersion>
     </ValidationPattern>
   </ItemGroup>
-
-  <!-- Runner versions -->
-  <PropertyGroup>
-    <AppXRunnerVersion>1.0.3-prerelease-00614-01</AppXRunnerVersion>
-  </PropertyGroup>
+  
   <!-- Import packaging props -->
   <Import Project="$(MSBuildThisFileDirectory)Packaging.props"/>
 
