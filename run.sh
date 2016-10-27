@@ -38,6 +38,15 @@ fi
 
 $__bootstrapDest --repositoryRoot $repoRoot
 
+if [ $__PATCH_CLI_NUGET_FRAMEWORKS -eq 1 ]; then
+    echo "Updating CLI NuGet Frameworks map..."
+    cp $__toolRuntime/NuGet.Frameworks.dll $__toolRuntime/dotnetcli/sdk/$__cliVersion
+    if [ "$?" != "0" ]; then
+        echo "ERROR: An error occured when updating Nuget for CLI . Please check '$__init_tools_log' for more details."1>&2
+        exit 1
+    fi
+fi
+
 if [ $? != 0 ]; then
     echo "run: Error: Boot-strapping failed with exit code $?, see bootstrap.log for more information." >&2
     exit $?
