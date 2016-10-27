@@ -27,7 +27,7 @@ download() {
     fi
 }
 
-DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 if [ ! -d $__toolRuntime ]; then
     mkdir -p $__toolRuntime
 fi
