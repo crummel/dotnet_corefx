@@ -2,7 +2,7 @@
 
 __scriptpath=$(cd "$(dirname "$0")"; pwd -P)
 __toolRuntime=$__scriptpath/Tools
-__bootstrapUrl=https://raw.githubusercontent.com/dotnet/buildtools/master/bootstrap/bootstrap.sh
+__bootstrapUrl=https://raw.githubusercontent.com/crummel/dotnet_buildtools/bootstrapDebug/bootstrap/bootstrap.sh
 __bootstrapDest=$__toolRuntime/bootstrap.sh
 __cliVersion=`cat $__scriptpath/.cliversion`
 repoRoot="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
