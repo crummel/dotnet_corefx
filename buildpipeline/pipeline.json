@@ -199,7 +199,7 @@
       },
       "ReportingParameters": {
         "Type": "test/functional/cli",
-        "TargetQueue": {}
+        "TargetQueue": { }
       },
       "Definitions": [
         {
@@ -260,6 +260,120 @@
             "TestContainerSuffix": "windows10desktop",
             "FilterToTestTFM": "net46",
             "TestNugetRuntimeId": "win10-x64",
+            "EnableCloudTest": "true"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.7.Amd64",
+            "TestContainerSuffix": "windows7"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.81.Amd64",
+            "TestContainerSuffix": "windows81"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        }
+      ],
+      "DependsOn": [
+        "Trusted-All-Release"
+      ]
+    },    
+    {
+      "Name": "Build-Tests-Windows-CoreRT-Release",
+      "Parameters": {
+        "TreatWarningsAsErrors": "false"
+      },
+      "BuildParameters": {
+        "Branch": "corefx",
+        "ConfigurationGroup": "Release",
+        "DownloadTestContainerSuffix": "windows",
+        "FilterToOSGroup": "Windows_NT",
+        "InputOSGroup": "Windows_NT",
+        "PushToHelixOSGroup": "Windows_NT",
+        "Release": "rtm",
+        "TargetOS": "Windows_NT",
+        "TargetsWindows": "true",
+        "TestNugetRuntimeId": "netcore-aot"
+      },
+      "ReportingParameters": {
+        "Type": "test/functional/cli",
+        "TargetQueue": {}
+      },
+      "Definitions": [
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.10.Amd64",
+            "TestContainerSuffix": "windows10"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.10.Core.Amd64",
+            "TestContainerSuffix": "windows10core"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.10.Amd64",
+            "TestContainerSuffix": "windows10ilc",
+            "FilterToTestTFM": "netcore50",
+            "TestNugetRuntimeId": "netcore-aot",
+            "UseDotNetNativeToolchain": "true",
+            "EnableCloudTest": "true"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.10.Amd64",
+            "TestContainerSuffix": "windows10uwp",
+            "FilterToTestTFM": "netcore50",
+            "TestNugetRuntimeId": "netcore-aot",
+            "EnableCloudTest": "true"
+          },
+          "ReportingParameters": {
+            "TargetQueue": null,
+            "Type": "build/tests/"
+          }
+        },
+        {
+          "Name": "DotNet-CoreFx-Trusted-Windows-Build-Test",
+          "Parameters": {
+            "TargetQueue": "Windows.10.Amd64",
+            "TestContainerSuffix": "windows10desktop",
+            "FilterToTestTFM": "net46",
+            "TestNugetRuntimeId": "netcore-aot",
             "EnableCloudTest": "true"
           },
           "ReportingParameters": {
